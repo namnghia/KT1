@@ -13,13 +13,13 @@ if (isset($_GET['view'])) {
     $salary = $_POST['salary'];
     $employeeController->addEmployee($name, $address, $salary);
 } elseif (isset($_POST['edit'])) {
-    $id = $_POST['id'];
+    $id = $_POST['#'];
     $name = $_POST['name'];
     $address = $_POST['address'];
     $salary = $_POST['salary'];
     $employeeController->updateEmployee($id, $name, $address, $salary);
 } elseif (isset($_POST['delete'])) {
-    $id = $_POST['id'];
+    $id = $_POST['#'];
     $employeeController->deleteEmployee($id);
 } else {
     $employees = $employeeController->listEmployees();
